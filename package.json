@@ -1,0 +1,17 @@
+{
+  "name": "thecenter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@athenna/common": "^4.44.0",
+    "puppeteer": "^23.1.0"
+  }
+}
