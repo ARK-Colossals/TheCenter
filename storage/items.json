@@ -1,13 +1,6 @@
 {
   "resources": [
     {
-      "name": "Name",
-      "stack_size": "Stack Size",
-      "item_id": "Item ID",
-      "class_name": "Class Name",
-      "blueprint_path": "Blueprint Path"
-    },
-    {
       "name": "Absorbent Substrate",
       "stack_size": "100",
       "item_id": "-",
@@ -594,6 +587,211 @@
       "item_id": "-",
       "class_name": "PrimalItemResource_Horn_C",
       "blueprint_path": "\"Blueprint'/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_Horn.PrimalItemResource_Horn'\""
+    }
+  ],
+  "ammunition": [
+    {
+      "name": "Advanced Bullet",
+      "stack_size": "100",
+      "item_id": "241",
+      "class_name": "PrimalItemAmmo_AdvancedBullet_C",
+      "blueprint_path": "\"Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_AdvancedBullet.PrimalItemAmmo_AdvancedBullet'\""
+    },
+    {
+      "name": "Advanced Rifle Bullet",
+      "stack_size": "100",
+      "item_id": "242",
+      "class_name": "PrimalItemAmmo_AdvancedRifleBullet_C",
+      "blueprint_path": "\"Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_AdvancedRifleBullet.PrimalItemAmmo_AdvancedRifleBullet'\""
+    },
+    {
+      "name": "Advanced Sniper Bullet",
+      "stack_size": "100",
+      "item_id": "-",
+      "class_name": "PrimalItemAmmo_AdvancedSniperBullet_C",
+      "blueprint_path": "\"Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_AdvancedSniperBullet.PrimalItemAmmo_AdvancedSniperBullet'\""
+    },
+    {
+      "name": "Boulder",
+      "stack_size": "100",
+      "item_id": "-",
+      "class_name": "PrimalItemAmmo_Boulder_C",
+      "blueprint_path": "\"Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_Boulder.PrimalItemAmmo_Boulder'\""
+    },
+    {
+      "name": "C4 Charge",
+      "stack_size": "100",
+      "item_id": "43",
+      "class_name": "PrimalItemC4Ammo_C",
+      "blueprint_path": "\"Blueprint'/Game/PrimalEarth/Test/PrimalItemC4Ammo.PrimalItemC4Ammo'\""
+    },
+    {
+      "name": "Cannon Ball",
+      "stack_size": "1",
+      "item_id": "-",
+      "class_name": "PrimalItemAmmo_CannonBall_C",
+      "blueprint_path": "\"Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_CannonBall.PrimalItemAmmo_CannonBall'\""
+    },
+    {
+      "name": "Cannon Shell",
+      "stack_size": "1",
+      "item_id": "-",
+      "class_name": "PrimalItemAmmo_CannonShell_C",
+      "blueprint_path": "\"Blueprint'/Game/Extinction/CoreBlueprints/Weapons/PrimalItemAmmo_CannonShell.PrimalItemAmmo_CannonShell'\""
+    },
+    {
+      "name": "Explosive Arrow",
+      "stack_size": "100",
+      "item_id": "-",
+      "class_name": "PrimalItemAmmo_ExplosiveArrow_C",
+      "blueprint_path": "\"Blueprint'/Game/Genesis2/Weapons/TekBow/PrimalItemAmmo_ExplosiveArrow.PrimalItemAmmo_ExplosiveArrow'\""
+    },
+    {
+      "name": "Flame Arrow",
+      "stack_size": "100",
+      "item_id": "-",
+      "class_name": "PrimalItemAmmo_ArrowFlame_C",
+      "blueprint_path": "\"Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_ArrowFlame.PrimalItemAmmo_ArrowFlame'\""
+    },
+    {
+      "name": "Flamethrower Ammo",
+      "stack_size": "30",
+      "item_id": "-",
+      "class_name": "PrimalItemAmmo_Flamethrower_C",
+      "blueprint_path": "\"Blueprint'/Game/ScorchedEarth/WeaponFlamethrower/PrimalItemAmmo_Flamethrower.PrimalItemAmmo_Flamethrower'\""
+    },
+    {
+      "name": "Grappling Hook",
+      "stack_size": "10",
+      "item_id": "-",
+      "class_name": "PrimalItemAmmo_GrapplingHook_C",
+      "blueprint_path": "\"Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_GrapplingHook.PrimalItemAmmo_GrapplingHook'\""
+    },
+    {
+      "name": "Jar of Pitch",
+      "stack_size": "100",
+      "item_id": "-",
+      "class_name": "PrimalItemAmmo_Boulder_Fire_C",
+      "blueprint_path": "\"Blueprint'/Game/Genesis2/Weapons/FireBoulder/PrimalItemAmmo_Boulder_Fire.PrimalItemAmmo_Boulder_Fire'\""
+    },
+    {
+      "name": "Net Projectile",
+      "stack_size": "100",
+      "item_id": "-",
+      "class_name": "PrimalItemAmmo_ArrowNet_C",
+      "blueprint_path": "\"Blueprint'/Game/Genesis2/Weapons/NetAmmo/PrimalItemAmmo_ArrowNet.PrimalItemAmmo_ArrowNet'\""
+    },
+    {
+      "name": "Metal Arrow",
+      "stack_size": "100",
+      "item_id": "373",
+      "class_name": "PrimalItemAmmo_CompoundBowArrow_C",
+      "blueprint_path": "\"Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_CompoundBowArrow.PrimalItemAmmo_CompoundBowArrow'\""
+    },
+    {
+      "name": "Pheromone Dart",
+      "stack_size": "100",
+      "item_id": "-",
+      "class_name": "PrimalItemAmmo_AggroTranqDart_C",
+      "blueprint_path": "\"Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_AggroTranqDart.PrimalItemAmmo_AggroTranqDart'\""
+    },
+    {
+      "name": "Rocket Homing Missile",
+      "stack_size": "100",
+      "item_id": "-",
+      "class_name": "PrimalItemAmmo_RocketHomingMissile_C",
+      "blueprint_path": "\"Blueprint'/Game/ScorchedEarth/WeaponHomingMissile/PrimalItemAmmo_RocketHomingMissile.PrimalItemAmmo_RocketHomingMissile'\""
+    },
+    {
+      "name": "Rocket Pod",
+      "stack_size": "1",
+      "item_id": "-",
+      "class_name": "PrimalItemAmmo_RocketPod_C",
+      "blueprint_path": "\"Blueprint'/Game/Extinction/CoreBlueprints/Weapons/PrimalItemAmmo_RocketPod.PrimalItemAmmo_RocketPod'\""
+    },
+    {
+      "name": "Rocket Propelled Grenade",
+      "stack_size": "100",
+      "item_id": "243",
+      "class_name": "PrimalItemAmmo_Rocket_C",
+      "blueprint_path": "\"Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_Rocket.PrimalItemAmmo_Rocket'\""
+    },
+    {
+      "name": "Shocking Tranquilizer Dart",
+      "stack_size": "100",
+      "item_id": "-",
+      "class_name": "PrimalItemAmmo_RefinedTranqDart_C",
+      "blueprint_path": "\"Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_RefinedTranqDart.PrimalItemAmmo_RefinedTranqDart'\""
+    },
+    {
+      "name": "Simple Bullet",
+      "stack_size": "100",
+      "item_id": "4",
+      "class_name": "PrimalItemAmmo_SimpleBullet_C",
+      "blueprint_path": "\"Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_SimpleBullet.PrimalItemAmmo_SimpleBullet'\""
+    },
+    {
+      "name": "Simple Rifle Ammo",
+      "stack_size": "100",
+      "item_id": "143",
+      "class_name": "PrimalItemAmmo_SimpleRifleBullet_C",
+      "blueprint_path": "\"Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_SimpleRifleBullet.PrimalItemAmmo_SimpleRifleBullet'\""
+    },
+    {
+      "name": "Simple Shotgun Ammo",
+      "stack_size": "100",
+      "item_id": "264",
+      "class_name": "PrimalItemAmmo_SimpleShotgunBullet_C",
+      "blueprint_path": "\"Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_SimpleShotgunBullet.PrimalItemAmmo_SimpleShotgunBullet'\""
+    },
+    {
+      "name": "Spear Bolt",
+      "stack_size": "100",
+      "item_id": "-",
+      "class_name": "PrimalItemAmmo_BallistaArrow_C",
+      "blueprint_path": "\"Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_BallistaArrow.PrimalItemAmmo_BallistaArrow'\""
+    },
+    {
+      "name": "Stone Arrow",
+      "stack_size": "100",
+      "item_id": "32",
+      "class_name": "PrimalItemAmmo_ArrowStone_C",
+      "blueprint_path": "\"Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_ArrowStone.PrimalItemAmmo_ArrowStone'\""
+    },
+    {
+      "name": "Tranq Arrow",
+      "stack_size": "100",
+      "item_id": "70",
+      "class_name": "PrimalItemAmmo_ArrowTranq_C",
+      "blueprint_path": "\"Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_ArrowTranq.PrimalItemAmmo_ArrowTranq'\""
+    },
+    {
+      "name": "Tranquilizer Dart",
+      "stack_size": "100",
+      "item_id": "-",
+      "class_name": "PrimalItemAmmo_TranqDart_C",
+      "blueprint_path": "\"Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_TranqDart.PrimalItemAmmo_TranqDart'\""
+    },
+    {
+      "name": "Tranq Spear Bolt",
+      "stack_size": "100",
+      "item_id": "-",
+      "class_name": "PrimalItemAmmo_TranqSpearBolt_C",
+      "blueprint_path": "\"Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_TranqSpearBolt.PrimalItemAmmo_TranqSpearBolt'\""
+    },
+    {
+      "name": "Transponder Node",
+      "stack_size": "100",
+      "item_id": "369",
+      "class_name": "PrimalItemTransGPSAmmo_C",
+      "blueprint_path": "\"Blueprint'/Game/PrimalEarth/Test/PrimalItemTransGPSAmmo.PrimalItemTransGPSAmmo'\""
+    },
+    {
+      "name": "Zip-Line Anchor",
+      "stack_size": "100",
+      "item_id": "-",
+      "class_name": "PrimalItemAmmo_Zipline_C",
+      "blueprint_path": "\"Blueprint'/Game/Aberration/CoreBlueprints/Weapons/PrimalItemAmmo_Zipline.PrimalItemAmmo_Zipline'\""
     }
   ]
 }

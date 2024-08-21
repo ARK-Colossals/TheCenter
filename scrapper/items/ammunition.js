@@ -15,8 +15,8 @@ await page.setViewport({ width: 1080, height: 1024 });
 await page.waitForSelector('.NN0_TB_DIsNmMHgJWgT7U', { visible: true });
 await page.click('.NN0_TB_DIsNmMHgJWgT7U');
 
-// Localiza o elemento com o ID 'Resources'
-const spanElement = await page.$('#Resources');
+// Localiza o elemento com o ID 'Ammunition'
+const spanElement = await page.$('#Ammunition');
 
 // Localiza o botão `show` para clicar
 const showButton = await spanElement.evaluateHandle((span) => {
@@ -42,7 +42,7 @@ const tableData = await page.evaluate(() => {
 });
 
 // Cria uma array para salvar os dados dentro.
-const resources = []
+const ammunition = []
 
 // Le os dados da tabela iniciando do índice 2 para ignorar os títulos.
 tableData.slice(2).forEach(row => {
@@ -53,8 +53,8 @@ tableData.slice(2).forEach(row => {
     return
   }
 
-  // Salva os dados no nosso array de resources.
-  resources.push({
+  // Salva os dados no nosso array de ammunition.
+  ammunition.push({
     'name': name.trim(),
     'stack_size': stack_size,
     'item_id': item_id,
@@ -69,7 +69,7 @@ const file = new File('../../storage/items.json', '{}')
 // Pega o conteúdo do arquivo como json
 const fileContentJson = await file.getContentAsJson() // {}
 
-fileContentJson.resources = resources
+fileContentJson.ammunition = ammunition 
 
 // Salva o arquivo com o novo conteúdo.
 await file.setContent(JSON.stringify(fileContentJson, null, 2))
