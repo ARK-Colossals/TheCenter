@@ -6,6 +6,11 @@
   "keywords": [],
   "dependencies": {
     "@athenna/common": "^4.44.0",
-    "puppeteer": "^23.1.0"
+    "@athenna/config": "^4.24.0",
+    "@athenna/ioc": "^4.24.0",
+    "@athenna/logger": "^4.25.0",
+    "@athenna/view": "^4.27.0",
+    "puppeteer": "^23.1.0",
+    "reflect-metadata": "^0.2.2"
   }
 }

@@ -1,9 +1,14 @@
 import puppeteer from 'puppeteer';
 import { File } from '@athenna/common'
+import { Logger } from '@athenna/logger'
+
+const logger = new Logger().vanilla('application')
 
 // Inicia o chrome e abre uma nova tab
 const browser = await puppeteer.launch();
 const page = await browser.newPage();
+
+logger.info('browser open')
 
 // Navega para a página
 await page.goto('https://ark.fandom.com/wiki/Item_IDs');
@@ -11,12 +16,18 @@ await page.goto('https://ark.fandom.com/wiki/Item_IDs');
 // Tamanho da tela
 await page.setViewport({ width: 1080, height: 1024 });
 
+logger.info('ark item wiki successfully open')
+
 // Aceita os cookies da página.
 await page.waitForSelector('.NN0_TB_DIsNmMHgJWgT7U', { visible: true });
 await page.click('.NN0_TB_DIsNmMHgJWgT7U');
 
-// Localiza o elemento com o ID 'Ammunition'
-const spanElement = await page.$('#Ammunition');
+logger.info('cookies accepted')
+
+// Localiza o elemento com o ID 'Trophies'
+const spanElement = await page.$('#Trophies');
+
+logger.info('found Trophies element')
 
 // Localiza o botão `show` para clicar
 const showButton = await spanElement.evaluateHandle((span) => {
@@ -26,8 +37,12 @@ const showButton = await spanElement.evaluateHandle((span) => {
 // Clica no botão show
 await showButton.click();
 
+logger.info('clicked on Trophies element show button')
+
 // Espera que os dados dos items estejam visíveis
 await page.waitForSelector('.wikitable', { visible: true });
+
+logger.info('table visible, retrieving data')
 
 // Extrai os dados da tabela
 const tableData = await page.evaluate(() => {
@@ -42,7 +57,7 @@ const tableData = await page.evaluate(() => {
 });
 
 // Cria uma array para salvar os dados dentro.
-const ammunition = []
+const trophies = []
 
 // Le os dados da tabela iniciando do índice 2 para ignorar os títulos.
 tableData.slice(2).forEach(row => {
@@ -53,8 +68,8 @@ tableData.slice(2).forEach(row => {
     return
   }
 
-  // Salva os dados no nosso array de ammunition.
-  ammunition.push({
+  // Salva os dados no nosso array de trophies.
+  trophies.push({
     'name': name.trim(),
     'stack_size': stack_size,
     'item_id': item_id,
@@ -63,15 +78,25 @@ tableData.slice(2).forEach(row => {
   })
 })
 
+logger.info('data successfully retrieved, saving to items.json')
+
 // Le o arquivo ou cria se não existir.
 const file = new File('../../storage/items.json', '{}')
+
+logger.info('loading items.json file')
 
 // Pega o conteúdo do arquivo como json
 const fileContentJson = await file.getContentAsJson() // {}
 
-fileContentJson.ammunition = ammunition 
+fileContentJson.trophies = trophies 
+
+logger.info('defining new content of items.json')
 
 // Salva o arquivo com o novo conteúdo.
 await file.setContent(JSON.stringify(fileContentJson, null, 2))
 
+logger.info('closing browser')
+
 await browser.close();
+
+console.log()
