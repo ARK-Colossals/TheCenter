@@ -11,11 +11,6 @@ const compiledGameUserSettings = await view.renderRawByPath(Path.pwd('src/templa
 
 await new File(Path.pwd('build/settings/GameUserSettings.ini'), '').setContent(compiledGameUserSettings)
 
-// TODO Fix &quot; bug on itemClass
-const configOverrideItemMaxQuantity = (itemClass, quantity) => {
-  return `ConfigOverrideItemMaxQuantity=(ItemClassString="${itemClass}",Quantity=(MaxItemQuantity=${quantity}, bIgnoreMultiplier=true))\n`
-}
-
 let items = []
 const keys = ['resources', 'ammunition', 'tools']
 const itemsRaw = await new File(Path.src('storage/items_db.json'), '').getContentAsJson()
@@ -29,7 +24,9 @@ Object.keys(itemsRaw).forEach(key => {
 })
 
 const compiledGame = await view.renderRawByPath(Path.pwd('src/templates/Game.ini.edge'), {
-  ITEMS_MAX_QUANTITY_OVERRIDE: items.map(item => configOverrideItemMaxQuantity(item.class_name, item.custom_stack_size))
+  ITEMS_MAX_QUANTITY_OVERRIDE: items.map(item => {
+    return `ConfigOverrideItemMaxQuantity=(ItemClassString="${item.class_name}",Quantity=(MaxItemQuantity=${item.custom_stack_size}, bIgnoreMultiplier=true))`
+  }).join('\n')
 })
 
 await new File(Path.pwd('build/settings/Game.ini'), '').setContent(compiledGame)
